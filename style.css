@@ -20,6 +20,8 @@ nav a:hover { color:#38bdf8; }
 .nav-toggle { display:none; font-size:26px; cursor:pointer; color:#38bdf8; }
 .hidden-model {
   display: none;
+}#model-viewer {
+  padding: 40px 0;
 }
 /* HERO */
 .hero {
