@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <head>
+  ...
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heliopath</title>
@@ -14,20 +18,31 @@
     <div class="nav-links" id="nav-links">
       <a href="#about">About</a>
       <a href="#working">Work</a>
+      <a href="#planning">Planning</a>
       <a href="#efficiency">Efficiency</a>
       <a href="#weather">Weather</a>
-      <a href="#contact">Contact</a>
+
     </div>
   </nav>
 
   <!-- HERO -->
-  <div class="hero">
+  <div class="hero reveal">
     <h1>HELIOPATH</h1>
     <p>Curved Solar Innovation for Smarter Energy</p>
   </div>
-
+<section class="vision reveal">
+  <div class="container">
+    <h2>Why Heliopath?</h2>
+    <p>
+      Urban spaces waste massive potential for solar energy. Traditional solar systems require large land areas and fixed angles, reducing efficiency.
+    </p>
+    <p>
+      <strong>Heliopath solves this by integrating curved solar structures over roads and walkways, maximizing sunlight capture while utilizing existing infrastructure.</strong>
+    </p>
+  </div>
+</section>
   <!-- ABOUT -->
-  <section id="about">
+  <section id="about" class="reveal">
     <div class="container">
       <div class="bout-container">
         <div class="bout-text">
@@ -44,7 +59,7 @@
   </section>
 
   <!-- PLANNING -->
-  <section id="planning">
+ <section id="planning" class="planning reveal">
     <div class="container">
       <div class="grid">
         <div class="card">
@@ -67,7 +82,7 @@
   </section>
 
   <!-- WORKING -->
-  <section id="working" class="working">
+  <section id="working" class="working reveal">
     <div class="container">
       <h2>How It Works</h2>
       <div class="workflow">
@@ -83,7 +98,7 @@
   </section>
 
   <!-- EFFICIENCY -->
-  <section id="efficiency" class="efficiency">
+  <section id="efficiency" class="efficiency reveal">
     <div class="container">
       <h2>Efficiency</h2>
       <div class="efficiency-container">
@@ -94,15 +109,131 @@
       </div>
     </div>
   </section>
+  `<section id="comparison" class="comparison reveal">
+  <div class="container">
+    <h2>Heliopath vs Traditional Solar</h2>
+
+    <div class="comparison-table">
+      <div class="row header">
+        <div>Feature</div>
+        <div>Traditional Solar</div>
+        <div>Heliopath</div>
+      </div>
+
+      <div class="row">
+        <div>Sunlight Capture</div>
+        <div>Fixed Angle</div>
+        <div>Multi-angle Curved</div>
+      </div>
+
+      <div class="row">
+        <div>Efficiency</div>
+        <div>60–70%</div>
+        <div>75–90%</div>
+      </div>
+
+      <div class="row">
+        <div>Tracking System</div>
+        <div>Required</div>
+        <div>Not Required</div>
+      </div>
+
+      <div class="row">
+        <div>Space Usage</div>
+        <div>Dedicated Land</div>
+        <div>Road Integration</div>
+      </div>
+
+      <div class="row">
+        <div>Maintenance</div>
+        <div>Higher</div>
+        <div>Lower</div>
+      </div>
+
+      <div class="row">
+        <div>Drainage</div>
+        <div>Separate System</div>
+        <div>Integrated Design</div>
+      </div>
+
+    </div>
+  </div>
+  <p style="margin-top:20px; opacity:0.8;">
+Heliopath improves solar capture efficiency by up to 20% compared to traditional fixed panels.
+</p>
+</section>
+<section class="usecase reveal">
+  <div class="container">
+    <h2>Real World Applications</h2>
+
+    <div class="grid">
+      <div class="card">
+        <h3>🛣 Highways</h3>
+        <p>Generate power using long road networks without extra land usage.</p>
+      </div>
+
+      <div class="card">
+        <h3>🏫 Campuses</h3>
+        <p>Install over walkways to provide shade and energy simultaneously.</p>
+      </div>
+
+      <div class="card">
+        <h3>🏙 Smart Cities</h3>
+        <p>Power street lights, sensors, and IoT systems efficiently.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="dash" class="dashboard reveal">
+  <div class="container">
+    <h2>Energy Dashboard</h2>
+    <div class="dashboard-grid">
+      <div class="dash-card">
+        <h3>⚡ Total Energy</h3>
+        <p id="total-energy">--</p>
+      </div>
+      <div class="dash-card">
+        <h3>📊 Avg Efficiency</h3>
+        <p id="avg-efficiency">--</p>
+      </div>
+      <div class="dash-card">
+        <h3>🔋 Battery Level</h3>
+        <p id="battery-level">--</p>
+      </div>
+    </div>
+  </div>
+</section>
 
   <!-- WEATHER -->
-  <section id="weather" class="weather-section">
+<section id="weather" class="weather-section reveal">
     <div class="container">
       <h2>Weather & Energy Prediction</h2>
       <div id="weather-container" class="weather-grid"></div>
     </div>
   </section>
+  <section class="cta-section reveal">
+  <div class="container">
+    <h2>Explore the Future of Solar Infrastructure</h2>
+    <p>Heliopath is not just a concept — it's a scalable solution for smarter cities.</p>
+<button class="cta-btn" id="view-btn" onclick="toggleModel()">View Full Project</button>
+  </div>
+</section>
+<section id="model-viewer" class="reveal hidden-model">
+  <div class="container">
+    <h2>3D Model View</h2>
+    <model-viewer 
+  src="model.glb"
+  auto-rotate
+  rotation-per-second="12deg"
 
+  camera-controls
+  camera-orbit="45deg 75deg 1.8m"
+
+  style="width:100%; height:80vh; background:#000;">
+</model-viewer>
+
+  </div>
+</section>
   <!-- FOOTER -->
   <footer>
     <p>Copyright ©2026 Heliopath, Inc. All rights reserved.<br>
