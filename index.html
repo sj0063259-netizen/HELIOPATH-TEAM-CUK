@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Heliopath</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav>
+    <h2>Heliopath</h2>
+    <div class="nav-toggle" id="nav-toggle">☰</div>
+    <div class="nav-links" id="nav-links">
+      <a href="#about">About</a>
+      <a href="#working">Work</a>
+      <a href="#efficiency">Efficiency</a>
+      <a href="#weather">Weather</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <h1>HELIOPATH</h1>
+    <p>Curved Solar Innovation for Smarter Energy</p>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container">
+      <div class="bout-container">
+        <div class="bout-text">
+          <h2>About Heliopath</h2>
+          <p><i>Heliopath is a curved solar panel system designed to improve energy efficiency by capturing sunlight from multiple angles throughout the day.</i></p>
+          <p><i>It is planned for installation over roads or open spaces, making use of unused areas while generating clean energy. The structure also supports drainage, battery storage, and future smart integrations.</i></p>
+        </div>
+        <div class="bout-img">
+          <h3>SOLAR PANEL ROOFTOP</h3>
+          <img src="https://www.surrey.ac.uk/sites/default/files/styles/image_gallery/public/2020-05/Canva%20-%20Blue%20Solar%20Panels.jpg?itok=M5jeByGm" alt="Solar Panels">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANNING -->
+  <section id="planning">
+    <div class="container">
+      <div class="grid">
+        <div class="card">
+          <img src="https://www.ecoticias.com/en/wp-content/uploads/2024/09/solar-panels-OnTheRoadTrends-1-1-1.jpg">
+          <h3>Road-based installation</h3>
+          <button onclick="openPDF('road-based.pdf')">View Details</button>
+        </div>
+        <div class="card">
+          <img src="https://www.civilengineermag.com/wp-content/uploads/2024/12/Road-drainage-1536x864-1.png">
+          <h3>Drainage integration</h3>
+          <button onclick="openPDF('Drainage.pdf')">View Details</button>
+        </div>
+        <div class="card">
+          <img src="https://www.power-sonic.com/wp-content/uploads/2025/08/Battery-Energy-Storage-System-Components-EVESCO-1024x334.png">
+          <h3>Battery storage system</h3>
+          <button onclick="openPDF('battery.pdf')">View Details</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKING -->
+  <section id="working" class="working">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="workflow">
+        <div class="step"><div class="icon">☀️</div><h3>Sunlight Capture</h3><p>Curved panels absorb sunlight from multiple angles throughout the day.</p></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="icon">⚡</div><h3>Energy Conversion</h3><p>Solar energy is converted into electricity using photovoltaic cells.</p></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="icon">🔋</div><h3>Energy Storage</h3><p>Electricity is stored in batteries for continuous availability.</p></div>
+        <div class="arrow">→</div>
+        <div class="step"><div class="icon">🏙️</div><h3>Utilization</h3><p>Stored energy powers infrastructure and smart systems.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EFFICIENCY -->
+  <section id="efficiency" class="efficiency">
+    <div class="container">
+      <h2>Efficiency</h2>
+      <div class="efficiency-container">
+        <div class="eff-card"><h3>🌞 Multi-angle Sunlight</h3><p>Curved panel design captures sunlight from multiple angles.</p></div>
+        <div class="eff-card"><h3>⚙️ No Tracking Required</h3><p>Eliminates need for mechanical tracking systems.</p></div>
+        <div class="eff-card"><h3>🌬️ Wind Resistance</h3><p>Curved design enhances aerodynamic performance.</p></div>
+        <div class="eff-card"><h3>💧 Natural Drainage</h3><p>Curved structure naturally directs rainwater off the surface.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEATHER -->
+  <section id="weather" class="weather-section">
+    <div class="container">
+      <h2>Weather & Energy Prediction</h2>
+      <div id="weather-container" class="weather-grid"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>Copyright ©2026 Heliopath, Inc. All rights reserved.<br>
+    Privacy & Legal Policies | Do Not Sell My Personal Information | Cookies Settings</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
