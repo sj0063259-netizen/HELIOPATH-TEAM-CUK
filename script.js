@@ -201,3 +201,23 @@ function toggleModel() {
     btn.innerText = "View Full Project";
   }
 }
+function toggleMap() {
+  const section = document.getElementById("deployment-map");
+  const btn = document.getElementById("map-btn");
+
+  if (section.classList.contains("hidden-model")) {
+    // SHOW MAP
+    section.classList.remove("hidden-model");
+
+    setTimeout(() => {
+      section.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+
+    btn.innerText = "Hide Deployment Map";
+  } else {
+    // HIDE MAP
+    section.classList.add("hidden-model");
+
+    btn.innerText = "View Deployment Map";
+  }
+}

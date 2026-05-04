@@ -238,7 +238,22 @@ p { opacity:0.85; line-height:1.6; }
   overflow:hidden;
   border:1px solid rgba(255,255,255,0.1);
 }
+.hidden-model {
+  display: none;
+}
 
+.deployment-img {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 15px;
+  margin-top: 20px;
+  box-shadow: 0 20px 50px rgba(0,224,255,0.15);
+  transition: 0.3s;
+}
+
+.deployment-img:hover {
+  transform: scale(1.02);
+}
 .row {
   display:grid;
   grid-template-columns:1fr 1fr 1fr;

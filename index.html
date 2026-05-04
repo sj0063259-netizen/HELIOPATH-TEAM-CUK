@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <head>
-  ...
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-</head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Heliopath</title>
+
   <link rel="stylesheet" href="style.css">
+
+  <!-- model viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 <body>
   <!-- NAVIGATION -->
@@ -57,7 +57,6 @@
       </div>
     </div>
   </section>
-
   <!-- PLANNING -->
  <section id="planning" class="planning reveal">
     <div class="container">
@@ -109,6 +108,26 @@
       </div>
     </div>
   </section>
+  <section class="deployment-section reveal">
+  <div class="container">
+    <h2>Campus Implementation Plan</h2>
+    <p style="opacity:0.7; margin-bottom:20px;">
+      Real-world deployment of Heliopath on CUK campus
+    </p>
+
+    <!-- BUTTON -->
+    <button class="cta-btn" id="map-btn" onclick="toggleMap()">
+      View Deployment Map
+    </button>
+  </div>
+</section>
+
+<!-- HIDDEN MAP SECTION -->
+<section id="deployment-map" class="hidden-model">
+  <div class="container">
+    <img src="deployment-map.png" alt="Campus Solar Plan" class="deployment-img">
+  </div>
+</section>
   `<section id="comparison" class="comparison reveal">
   <div class="container">
     <h2>Heliopath vs Traditional Solar</h2>
@@ -221,16 +240,22 @@ Heliopath improves solar capture efficiency by up to 20% compared to traditional
 <section id="model-viewer" class="reveal hidden-model">
   <div class="container">
     <h2>3D Model View</h2>
+
     <model-viewer 
-  src="model.glb"
-  auto-rotate
-  rotation-per-second="12deg"
+      src="solar.glb"
 
-  camera-controls
-  camera-orbit="45deg 75deg 1.8m"
+      auto-rotate
+      auto-rotate-delay="0"
+      rotation-per-second="12deg"
 
-  style="width:100%; height:80vh; background:#000;">
-</model-viewer>
+      camera-controls
+      camera-orbit="45deg 75deg 2m"
+
+      shadow-intensity="1"
+      exposure="1"
+
+      style="width:100%; height:80vh; background:#000;">
+    </model-viewer>
 
   </div>
 </section>
